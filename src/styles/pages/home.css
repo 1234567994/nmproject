@@ -1,0 +1,99 @@
+.home-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #010101 0%, #0b0b0b 100%);
+}
+
+.home-hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(220, 215, 215, 0.2), rgba(241, 240, 240, 0.4)),
+    url('images/hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3%;
+}
+
+.hero-overlay {
+  background-color: rgba(228, 63, 63, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-right: 2%;
+  backdrop-filter: blur(4px);
+  border-right: 3px solid #8b0000;
+}
+
+.home-hero h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: rgb(35, 88, 144); /* Added white color */
+  text-transform: uppercase; /* Added uppercase */
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);/* Optional: adds emphasis */
+}
+
+.home-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  color: rgb(6, 81, 187);
+  margin-left: 40px; /* Shift slightly to the right */
+}
+
+
+.home-hero h1::after {
+  width: 120px;
+  bottom: -8px;
+   /* Optional: if you want the underline in white too */
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments - All text colors preserved */
+@media (max-width: 1200px) {
+  .hero-overlay {
+    max-width: 300px;
+    padding: 1.5rem;
+  }
+  .home-hero h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 0 2%;
+  }
+  .hero-overlay {
+    width: 70%;
+    padding: 1rem;
+  }
+  .home-hero h1 {
+    font-size: 2.2rem;
+  }
+  .home-hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding: 1rem;
+  }
+  .home-hero h1 {
+    font-size: 1.8rem;
+  }
+  .home-hero p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .cta-button {
+    padding: 10px 20px;
+  }
+}

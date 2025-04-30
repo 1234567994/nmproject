@@ -1,0 +1,290 @@
+/* Modern About Page Styles - Enhanced Version */
+.about-container {
+  background: linear-gradient(135deg, #070707 0%, #0f0f0f 100%);
+  min-height: 100vh;
+  color: #2d3748; /* Darker base text color */
+  font-size: 1.1rem; /* Slightly larger base font size */
+  line-height: 1.6; /* Better readability */
+}
+
+.about-hero {
+  height: 70vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url('images/about-us.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Keeps background fixed during scroll */
+  background-position: center top; /* Adjust based on your image focal point */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  overflow: hidden;
+}
+
+.about-hero {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  overflow: hidden;
+}
+
+.about-hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Adjust as needed */
+  z-index: -1;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  z-index: -1;
+}
+/* Optional: Add these properties to ensure consistent image display */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url('images/about-us.jpg') no-repeat center center/cover;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-hero h1 {
+  font-size: 4rem; /* Larger heading */
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  font-weight: 800; /* Bolder weight */
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.about-hero p {
+  font-size: 1.7rem; /* Larger paragraph */
+  color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.about-content {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: -5rem auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 2.5rem;
+  color: #1a365d; /* Darker blue */
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(to right, #4a90e2, #50c878);
+  border-radius: 2px;
+}
+
+/* Floating Cards with Gradient Backgrounds */
+.floating-box {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem; /* More padding */
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.1);
+  border-left: 5px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-box h2 {
+  font-size: 2rem;
+  color: #2d3748; /* Darker text */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.floating-box p {
+  font-size: 1.2rem; /* Larger paragraph */
+  color: #4a5568; /* Darker gray */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.floating-box:hover {
+  transform: translateY(-8px); /* More pronounced hover */
+  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.2);
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem 0; /* More spacing */
+  flex-wrap: wrap;
+  gap: 2rem; /* Larger gap */
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.9); /* Less transparent */
+  backdrop-filter: blur(10px);
+  padding: 3rem 1.5rem; /* More vertical padding */
+  border-radius: 16px;
+  text-align: center;
+  width: 240px; /* Slightly wider */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.stat-card h3 {
+  font-size: 3.2rem; /* Larger numbers */
+  background: linear-gradient(135deg, #4a90e2 0%, #50c878 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.8rem;
+  font-weight: 800; /* Bolder */
+}
+
+.stat-card p {
+  color: #4a5568; /* Darker text */
+  font-size: 1.3rem; /* Larger text */
+  font-weight: 600; /* Bolder */
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin: 7rem 0 4rem; /* More spacing */
+  padding: 5rem 2rem; /* More padding */
+  background: linear-gradient(135deg, #4a90e2 0%, #50c878 100%);
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section h2 {
+  font-size: 3rem; /* Larger heading */
+  margin-bottom: 2rem;
+  position: relative;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cta-section p {
+  font-size: 1.3rem; /* Larger text */
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background: white;
+  color: #4a90e2;
+  border: none;
+  padding: 1.2rem 3rem; /* Larger button */
+  font-size: 1.3rem; /* Larger text */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  min-width: 220px; /* Minimum width */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 60vh;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.4rem;
+  }
+  
+  .floating-box {
+    padding: 2.5rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .stat-card {
+    width: 100%;
+    padding: 2.5rem 1rem;
+  }
+  
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
+}

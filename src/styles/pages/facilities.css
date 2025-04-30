@@ -1,0 +1,123 @@
+.facilities-container {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #d0e2e7 0%, #e6f0f9 100%);
+}
+
+.facilities-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  padding: 1rem;
+}
+
+.facility-card {
+  background: rgb(251, 251, 251);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.facility-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.facility-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-image {
+  transform: scale(1.05);
+}
+
+.facility-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(74, 144, 226, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.facility-content {
+  padding: 1.5rem;
+}
+
+.facility-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.facility-content p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.virtual-tour {
+  text-align: center;
+  margin: 4rem auto 0;
+  padding: 3rem;
+  background: linear-gradient(to right, #50c878, #4a90e2);
+  border-radius: 10px;
+  color: white;
+  max-width: 800px;
+}
+
+.virtual-tour h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tour-button {
+  background: white;
+  color: #4a90e2;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.tour-button:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}

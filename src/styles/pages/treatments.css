@@ -1,0 +1,170 @@
+.treatments-container {
+  max-width: 1400px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 3rem 2rem; /* More vertical padding */
+  background: linear-gradient(to bottom, #d0e2e7, #f0f7ff); /* Subtle gradient background */
+}
+
+.treatments-container h1 {
+  text-align: center;
+  margin-bottom: 3rem; /* More spacing */
+  color: #1a2b3c; /* Darker heading color */
+  font-size: 2.8rem; /* Larger heading */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.treatments-container h1::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Wider cards */
+  gap: 2.5rem; /* More space between cards */
+}
+
+.treatment-card {
+  background: white;
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.treatment-image-container {
+  width: 100%;
+  height: 240px; /* Taller image container */
+  overflow: hidden;
+  position: relative;
+}
+
+.treatment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.treatment-card:hover .treatment-image {
+  transform: scale(1.08); /* Slightly stronger zoom */
+}
+
+.treatment-content {
+  padding: 2rem; /* More padding */
+}
+
+.treatment-content h3 {
+  margin: 0 0 1rem 0;
+  color: #1a2b3c; /* Darker text */
+  font-size: 1.5rem; /* Larger font */
+  font-weight: 700; /* Bolder */
+  line-height: 1.3;
+}
+
+.treatment-content p {
+  color: #4a5568; /* Darker, more readable gray */
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem; /* Larger paragraph */
+  line-height: 1.6; /* Better readability */
+}
+
+.price {
+  font-weight: 800; /* Bolder price */
+  color: #27ae60;
+  font-size: 1.4rem; /* Larger price */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price::before {
+  content: '₹';
+  font-size: 1.2rem;
+}
+
+.book-button {
+  width: 100%;
+  padding: 1rem; /* More padding */
+  background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* More rounded */
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem; /* Larger text */
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.book-button:hover {
+  background: linear-gradient(to right, #2980b9, #27ae60); /* Darker gradient */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .treatments-container h1 {
+    font-size: 2.4rem;
+  }
+  
+  .treatments-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .treatments-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .treatments-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .treatment-image-container {
+    height: 200px;
+  }
+  
+  .treatment-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatments-container h1 {
+    font-size: 2rem;
+  }
+  
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .treatment-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .book-button {
+    padding: 0.9rem;
+  }
+}

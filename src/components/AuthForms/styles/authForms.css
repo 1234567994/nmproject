@@ -1,0 +1,117 @@
+.auth-form-container {
+  max-width: 800px; /* Increased from 500px */
+  margin: 50px auto;
+  padding: 40px; /* Increased padding */
+  background: rgb(201, 195, 195);
+  border-radius: 12px; /* Slightly more rounded */
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* Deeper shadow */
+}
+
+.auth-form-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 35px; /* More spacing */
+  font-size: 2.5rem; /* Larger heading */
+  font-weight: 700; /* Bolder */
+  letter-spacing: 0.5px; /* Better readability */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 25px; /* More spacing between fields */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 15px;
+  color: #1a365d; /* Even darker blue for better contrast */
+  font-weight: 800; /* Extra heavy weight */
+  font-size: 2rem;
+  font-family: 'Montserrat', 'Arial', sans-serif; /* More distinctive font */
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* All caps for emphasis */
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  position: relative;
+  display: inline-block; /* For the underline effect */
+}
+
+
+.form-group input {
+  width: 100%;
+  padding: 15px 20px; /* Larger input fields */
+  border: 2px solid #ddd; /* Thicker border */
+  border-radius: 6px; /* Slightly more rounded */
+  font-size: 1.1rem; /* Larger text */
+  font-weight: 600; /* Medium weight */
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Focus ring */
+}
+
+.submit-button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 15px; /* Larger button */
+  font-size: 1.2rem; /* Larger text */
+  font-weight: 600; /* Bolder */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px; /* More spacing */
+  letter-spacing: 0.5px; /* Better readability */
+}
+
+.submit-button:hover {
+  background: #357abd;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Deeper shadow on hover */
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 25px; /* More spacing */
+}
+
+.auth-links a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600; /* Bolder links */
+  font-size: 1.1rem; /* Larger links */
+  transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c;
+  background: #fadbd8;
+  padding: 12px 15px; /* Larger padding */
+  border-radius: 6px;
+  margin-bottom: 25px; /* More spacing */
+  text-align: center;
+  font-size: 1.1rem; /* Larger text */
+  font-weight: 600; /* Bolder */
+}
+
+.success-message {
+  color: #27ae60;
+  background: #d5f5e3;
+  padding: 12px 15px; /* Larger padding */
+  border-radius: 6px;
+  margin-bottom: 25px; /* More spacing */
+  text-align: center;
+  font-size: 1.1rem; /* Larger text */
+  font-weight: 600; /* Bolder */
+}
